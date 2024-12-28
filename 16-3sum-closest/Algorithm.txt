@@ -1,0 +1,15 @@
+Since we have to return the sum so we can sort the array.
+First sort the array.
+Take a variable let's say closest and initialize it with the larget possible value +infinity.
+
+Now iterate over the array till third last element (i = 0 to len(array)-2) 
+  for each element array[i], use two pointer approach 
+  left will be at index i+1, right will be at the last element
+  now calculate the current sum of array[i] + array[left] + array[right]
+  compare the absolute difference of (target - current sum) and absolute difference of (target - closest) to know weather the current sum is more close to the target or not (i.e 
+  smaller than (target - closest))
+  if it is, then simply update the closest to current sum
+
+  also check which pointer either left or right to update based on weather current sum is larger or smaller then the target
+  
+return the closest
