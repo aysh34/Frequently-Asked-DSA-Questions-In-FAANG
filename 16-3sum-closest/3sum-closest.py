@@ -3,7 +3,7 @@ class Solution:
         n = len(nums)
         nums.sort()
         closest = float("inf")
-        for i in range(n):  # fix one no
+        for i in range(n-2):  # fix one no
             l = i + 1 # two pointer approach
             r = n - 1
             while l < r:
