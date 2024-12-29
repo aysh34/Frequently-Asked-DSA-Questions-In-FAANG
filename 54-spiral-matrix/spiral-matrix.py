@@ -34,15 +34,17 @@ class Solution:
                 right -= 1  # move right towards left side
 
             elif dir == 2:
-                for i in range(right, left - 1 ,-1):  # move from right to left
+                for i in range(right, left - 1, -1):  # move from right to left
                     res.append(matrix[bottom][i])  # bottom row is constant
                 bottom -= 1  # move bottom upwards
 
             elif dir == 3:
-                for i in range(bottom, top - 1,-1):  # move from bottom to top
+                for i in range(bottom, top - 1, -1):  # move from bottom to top
                     res.append(matrix[i][left])  # left col is constant
                 left += 1  # move left towards right side
 
-            dir = (dir + 1) % 4
-        
+            dir = (
+                dir + 1
+            ) % 4  #  way to ensure the dir variable cycles through the values 0, 1, 2, 3 in a circular manner
+
         return res
