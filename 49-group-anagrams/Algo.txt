@@ -1,0 +1,19 @@
+Two strings are said to be anagrams if they have same elements with same frequency 
+
+like ate, eat, tea
+
+take a map
+key (sorted version of the string) : value (list of original strings)
+
+like this
+aet : [ate, eat, tea]
+ant : [nat , tan, ant]
+
+loop through the given list of strings:
+first sort each string
+now look into the map if this sorted string as key exists in map already or not :
+if it's not, make the new key with this sorted version and initialize an empty list as value
+    simply append the unsorted original string in the list 
+
+
+if key exists, simply append the unsorted original string in the value / list 
