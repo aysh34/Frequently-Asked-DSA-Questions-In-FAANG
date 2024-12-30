@@ -1,0 +1,43 @@
+we have given a m x n matrix, we have to return elements in sprial fasion
+
+we need to observe a pattern that there are basically 4 directions and once we hit the last 4th direction we start over it again with 1st direction
+
+these directions are:
+
+  left to right -->  direction 0
+  top to bottom -->  direction 1
+  right to left  --> direction 2
+  bottom to top -->  direction 3
+
+then just repeate this 
+
+
+To simulate this we take 4 pointers/variaables as :
+
+top =     initially points to 1st row
+right =   initially points to last col
+left =    initially points to 1st col
+bottom =  initially points to last row
+
+Simply loop untill top <= bottom and left <= right ( when this condition met, you'll be at the last element):
+inside loop you have to check which direction you have (initiall dir = 0)
+
+if dir is 0 then your top row is constant and cols are changing 
+so use for loop from left to right and prints all element with matrix[top][i] --------> i is changing for every column
+once the loop is over , increment the top from 0 to 1 bcz 1st row is now done, top is now pointing to 2nd row
+
+elif dir is 1 then your right(last col) is constant and rows are changing
+so use for loop from top to bottom and prints all element with matrix[i][right] --------> i is changing for every row
+once the loop is over , decrement the right from last to 2nd last col bcz last col is now done, right is now pointing to 2nd last col
+
+elif dir is 2 then your bottom row is constant and cols are changing
+so use for loop from right to left and prints all element with matrix[bottom][i] --------> i is changing for every column
+once the loop is over , decrement the bottom from last row to 2nd last row bcz last row is now done, bottom is now pointing to 2nd last row
+
+elif dir is 3 then your left is constant and rows are changing
+so use for loop from bottom to top and prints all element with matrix[i][left] --------> i is changing for every row
+once the loop is over , increment the left from 0 to 1 bcz 1st col is now done, left is now pointing to 2nd col
+
+
+now you have to calculate the new dir value by this formaula dir = (dir + 1 ) % 4 ----> (this ensure that dir values ranges form 0 to 3) every time since its cyclic process 
+
