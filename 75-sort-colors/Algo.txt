@@ -1,0 +1,21 @@
+Since we have just three distinct values(0,1,2) so we will use 3 pointers for each digit 0 , 1 , 2 
+
+i = 0                 ---------> for 0
+j = 0                 ---------> for 1
+k = len(array) -1     ---------> for 2
+
+we will loop through the array until j is less or equal to k , once j crosses k we'll break the loop and we have done sorting the array
+
+inside loop we'll check weather array[j] is equal to 0 or 1 or 2
+
+if array[j] == 2:
+we know this current element should be at kth index
+so we will simply swap the element with kth index element and decrement k 
+
+if array[j] == 1:
+we know this current element should be at ith index
+so we will simply swap the element with ith index element and increment both i and j bcz we initialized both i and j with same spot
+
+if array[j] == 0:
+we know this current element is its correct place
+so we will simply just increment j to check the next element
