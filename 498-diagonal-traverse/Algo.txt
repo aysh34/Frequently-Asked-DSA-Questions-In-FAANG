@@ -1,0 +1,17 @@
+This is pretty much similar to sort the elements diagonally problem 
+
+just remember two things when there is diagonal traversal of 2d matrix 
+
+when you are traversing diagonal this way ↗ or ↙ use i+j , why???? bcz all elements in a specfic diagonal have same value for i+j
+when you are traversing diagonal this way ↘ or ↖ use i-j , why???? bcz all elements in a specfic diagonal have same value for i-j
+
+In this problem i am using i+j for traversing and storing all the diagonals in a map
+    key(i+j) : value(list of elements having same value for i+j)
+
+
+Now extract all the values from map and store them in a new list since we have to iterate over it.
+
+whyy?????
+bcz In problem its specified first go ↗ this way then go ↙ way
+
+so i have to reverse every second(i.e even) value/list from new list while traversing
