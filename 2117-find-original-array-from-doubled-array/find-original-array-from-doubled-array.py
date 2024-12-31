@@ -1,26 +1,22 @@
+from collections import Counter
 class Solution:
     def findOriginalArray(self, changed: List[int]) -> List[int]:
-        if len(changed) % 2 != 0:
+        if len(changed) % 2 != 0: 
             return []
 
-        changed.sort()
-        mp = {}
+        changed.sort() 
+        mp = Counter(changed)  # Frequency map for changed array
         res = []
 
-        for i in changed: # populate map
-            if i not in mp:
-                mp[i] = 0
-            mp[i] += 1
-
-        for j in changed:
-            if mp[j] == 0: # freq = 0 so skip
+        for num in changed:
+            if mp[num] == 0:  # If freq = 0, skip it
                 continue
-            if mp.get(j * 2, 0) == 0:  # If double of i is not available, return []
+            if mp[num * 2] == 0:  # If double of the number doesn't exist, return []
                 return []
 
+            # otherwise we've found its twice so decrease their frequencies
+            res.append(num)
+            mp[num] -= 1
+            mp[num * 2] -= 1
 
-            # otherwise we've found the twice so append the num
-            res.append(j)
-            mp[j] -= 1
-            mp[j*2] -= 1
         return res
