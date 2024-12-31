@@ -3,7 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        ''' simple but tricky solution '''
+        '''simple but tricky
+        Dutch National Flag Problem i.e sorting in single pass
+        '''
 
         i = 0           # denotes 0
         j = 0           # denotes 1
@@ -19,10 +21,4 @@ class Solution:
                 j += 1 # bcz j and i both started at 0
             else:
                 j += 1
-
-
-
-
-
-
-
+# tc = o(n) , sc = o(1)
