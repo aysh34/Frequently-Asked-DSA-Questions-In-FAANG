@@ -1,0 +1,33 @@
+nums = [1,2,3,4]              
+queries = [[1,0], [2,3], [-4,0], [2,2]]
+
+Each query has [value , index]
+
+All you need to do is, go to the element at index(mention in query) in nums and add the value (mention in query)
+When you've done this, now calculate the sum of even numbers in updated nums array
+store it in an array bcz this is what you actually need to return
+
+Brute force -------------> apply each query on nums array and iterate and calculate the sum of even numbers after each query. This costs O(N * n )
+N = length of queries array
+n = length of nums
+
+
+
+Better approach --------------------> O(n) where n = length of queries array
+
+
+
+Calculate the sum of even no in nums initially
+
+Now iternate on queries:
+first check the no in nums on which query must be applied is even or not
+if its even, then this no must be contributed when we were calculating the sum of even numbers so subtract this no from the sum
+
+now apply the query on this no which is basically adding value in this number
+
+when we done adding, it means nums array has got updated
+
+so we again check weather this new no is even or not
+if it is, we have to calculate the sum again by adding this no in the sum
+
+after this we are done with one query so we can add this sum to the resultant array
