@@ -6,7 +6,7 @@ This repository contains solutions to popular array problems frequently asked in
 
 Each problem directory contains:
 - **README.md**: Detailed problem description, constraints, and examples.
-- **Solution**: Implemented in Python (or your preferred language).
+- **Solution**: Implemented in Python.
 
 ## Contributing
 
