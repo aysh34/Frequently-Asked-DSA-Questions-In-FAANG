@@ -3,7 +3,7 @@ class Solution:
         total_sum = sum(nums)
         left_sum = 0
         for i in range(len(nums)):
-            # har index k liye left sum or right sum nikalo jiska ye dono same hu wahi answer ho ga
+            # pehle har index ka left sum or right sum check krlo jiska ye dono same hu wahi answer ho ga otherwise es current element ko left sum mei add krdo or agy barh jao next element ko dekho
             right_sum = total_sum - left_sum - nums[i]
             if left_sum == right_sum:
                 return i
