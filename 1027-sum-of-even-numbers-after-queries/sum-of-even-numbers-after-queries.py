@@ -1,19 +1,23 @@
-from typing import List
-
 class Solution:
-    def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
-        even_sum = sum(x for x in nums if x % 2 == 0)  # Initial sum of even numbers
+    def sumEvenAfterQueries(
+        self, nums: List[int], queries: List[List[int]]) -> List[int]:
+        sum_even = sum(n for n in nums if n % 2 == 0)
         res = []
-        
-        for val, index in queries:
-            if nums[index] % 2 == 0:  # If the current number is even, remove it from even_sum
-                even_sum -= nums[index]
+
+        for val , idx in queries:
+            # sbsy phele tu check kro js no pr query lagane bol rha hai nums mei wo even tu nhi hai
+            if nums[idx] % 2 == 0:
+                sum_even -= nums[idx]
+
+            # ab query lga do uss no pr
+            nums[idx] = nums[idx] + val 
+
+            # ab q k nums update hu gya wo phr se even numbers ka sum nikale gai
+            # usk liye bs itna dekho k ye new number ju query k bad bna hai ye even hai k odd
+
+            if nums[idx] % 2 == 0:
+                sum_even += nums[idx] # add kr do iss no ko
             
-            nums[index] += val  # Update the number
-            
-            if nums[index] % 2 == 0:  # If the updated number is even, add it to even_sum
-                even_sum += nums[index]
-            
-            res.append(even_sum)  # Store the current even_sum
-        
+            res.append(sum_even)
+
         return res
