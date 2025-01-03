@@ -6,6 +6,6 @@ class Solution:
             if nums[i] in mp:
                 if abs(mp[nums[i]] - i) <= k:
                     return True
-            # weather the current element is not in the map or abs(i-j) <= k condition doesn't met update mp[nums[i]] to this new index i
+# weather the current element is not in the map or is present in map but the condition abs(i-j) <= k doesn't met update the value of key/current no in map to this new/latest index i            
             mp[nums[i]] = i
         return False
