@@ -1,0 +1,16 @@
+If there are three sides lets say a, b, c then we can create a triangle with these if these three conditions fulfill:
+a+b > c
+a+c > b
+b+c > a
+
+but here is the catch , if these three sides are sorted in ascending order then we just need to check the one condition which is this
+a+b > c
+
+
+same applies in the problem , we first sort the array
+since we need largest perimeter, so iterate backwards till 3rd last element bcz in each iteration we are checking for three numbers (ith no , i-1th no, i-2th no) so just stop at index 
+2
+
+if previous two numbers sum > current number, then we have found largest perimeter and we'll return the sum of these numbers
+
+otherwise return 0 outside loop 
