@@ -1,0 +1,28 @@
+The index marking technique is a clever way to solve problems involving arrays when:
+
+- The array contains numbers within a fixed range (e.g., from 1 to n).
+- The goal is to identify duplicates, missing numbers, or other anomalies.
+
+This technique works because:
+
+The numbers in the array correspond to indices (since they are from 1 to n).
+The array itself is used as a hash map to store information, without requiring extra space.
+
+Q k numbers array mei 1 se n tk hai tu hm ye technique use kr skty hain
+is tarh ki array mei har number ek valid index se map hota hai mtlb ye k hm (current no) - 1 krne se ek valid index pr pohnch jai gai
+pohanch jane pr us element ko -ve bna dein gai
+
+
+
+First nums array pr iterate kro or har bar ek index nikalo aisy ---------> index = abs(current_number) - 1
+
+ab is index pr ja k element ko dekho k wo already -ve hai k nhi
+
+agr hai, tu mtlb mei is numbser ko phele hi seen kr chuki hon tu paka yehi duplicate hai so mark it as duplicate
+
+agr nhi hai, tu is element pr mei pehli bar ai hon tu issy ab -ve krdo -1 se multiply kr k
+
+
+dobara array pr loop lago or check kro konsa elemrnt -ve kbhi bna hi nhi mtlb ju no +ve hai 
+
+ab ye ju +ve number hai ----------------> iski (index + 1) hi basically missing number hai
