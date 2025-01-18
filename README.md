@@ -1,13 +1,16 @@
-# Arrays
+# Frequently Asked DSA in FAANG
 
-This repository contains solutions to popular array problems frequently asked in FAANG (Facebook, Amazon, Apple, Netflix, Google) interviews. Each solution is organized into its own directory with a detailed explanation and implementation.
+Problems frequently asked in FAANG.
 
-## Structure
+## Table of Contents
+- [Introduction](#introduction)
+- [Problem List](#problem-list)
+  
+## Introduction
+This repository contains a collection of Data Structures and Algorithms problems that are frequently asked in interviews by FAANG (Facebook, Amazon, Apple, Netflix, Google) companies. Each problem includes a detailed explanation and solution.
 
-Each problem directory contains:
-- **README.md**: Detailed problem description, constraints, and examples.
-- **Solution**: Implemented in Python.
-
-## Contributing
-
-Feel free to fork this repository, work on new solutions, and submit pull requests. Any improvements or additional problems are welcome.
+## Problem List
+Here are some of the problems included in this repository:
+- [Two Sum](https://leetcode.com/problems/two-sum) ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+- [Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle) ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
+- [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries) ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange)
