@@ -3,11 +3,11 @@ class Solution:
         arr = []
         i = 0 
         stream = 1 # [1,n]
-        
-        while i < len(target) and stream <= n:
-            arr.append("Push") # stream se nikal liya tu push tu krna pary ga
 
-            if stream == target[i]:
+        while i < len(target) and stream <= n:
+            arr.append("Push") # push current stream element
+
+            if stream == target[i]: # correct element is pushed
                 i += 1 
             else:
                 arr.append("Pop")
