@@ -16,6 +16,11 @@ class DetectSquares:
                 total += freq * self.map[(px, queryY)] * self.map[(queryX, py)]
         return total
 
+# (queryX, queryY)  ➡ Tumhara main point (Top-Left Corner)
+# (px, queryY)      ➡ Same Y, different X (Top-Right Corner)
+# (queryX, py)      ➡ Same X, different Y (Bottom-Left Corner)
+# (px, py)          ➡ Diagonal Point (Bottom-Right Corner)
+
 
 # Your DetectSquares object will be instantiated and called as such:
 # obj = DetectSquares()
