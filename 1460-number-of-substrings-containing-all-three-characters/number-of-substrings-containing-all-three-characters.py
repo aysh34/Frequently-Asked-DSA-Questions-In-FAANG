@@ -6,13 +6,17 @@ class Solution:
 
         for right in range(len(s)):
             count[s[right]] += 1  # Add character to window
-            
-            while all(count[ch] > 0 for ch in "abc"):  # Check if all 'a', 'b', 'c' exist
+
+            # all(iterable)
+            # valid window condition --> count[ch] > 0 for ch in "abc"
+            while all(count[ch] > 0 for ch in "abc"):  # if all 'a', 'b', 'c' exist
                 count[s[left]] -= 1  # Shrink window from left
                 left += 1
-            res += left  # Count valid substrings
+            res += left # all substrings before left are valid so, add 
 
         return res
+
+
         # c = 0
         # for i in range(len(s)):
         #     for j in range(i+1,len(s)+1):
